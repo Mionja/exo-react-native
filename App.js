@@ -1,9 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Flexbox from './src/Flexbox';
+import Exo1 from './src/components/exo1';
 
 export default function App() {
   return (
-    <Flexbox />
+    <Exo1/>
   );
 }
