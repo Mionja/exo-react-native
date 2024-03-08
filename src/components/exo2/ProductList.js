@@ -79,10 +79,7 @@ const ProductList = ({ navigation }) => {
   );
 
   return (
-    <View style={styles.container}>
-      <View style={styles.navigation}>
-        <Text style={styles.navigationTitle}>Product Navigation</Text>
-      </View>
+    <View>
       <FlatList
         style={styles.contentList}
         columnWrapperStyle={styles.listContainer}
@@ -95,18 +92,18 @@ const ProductList = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
-  navigation: {
-    backgroundColor: "#0066ff",
-    padding: 10,
-  },
-  navigationTitle: {
-    color: "#fff",
-    fontWeight: "bold",
-  },
+  // container: {
+  //   flex: 1,
+  //   backgroundColor: "#fff",
+  // },
+  // navigation: {
+  //   backgroundColor: "#0066ff",
+  //   padding: 10,
+  // },
+  // navigationTitle: {
+  //   color: "#fff",
+  //   fontWeight: "bold",
+  // },
   contentList: {
     margin: 1,
     flex: 1,
