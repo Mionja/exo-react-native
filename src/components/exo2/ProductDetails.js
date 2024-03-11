@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View, Image} from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View, ScrollView,Image} from "react-native";
 
 export const ProductDetails = ({ route }) => {
   const { product } = route.params;
@@ -18,7 +18,7 @@ export const ProductDetails = ({ route }) => {
     return stars.join(" ");
   };
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Image style={styles.image} source={{ uri: product.image }} />
       <View>
         <Text style={styles.heading}>{product.title}</Text>
@@ -29,7 +29,7 @@ export const ProductDetails = ({ route }) => {
           <Text style={styles.buttonText}>comment</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

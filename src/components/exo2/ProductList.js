@@ -2,6 +2,7 @@ import {
   StyleSheet,
   Text,
   View,
+  ScrollView,
   Image,
   TouchableOpacity,
   FlatList,
@@ -55,7 +56,7 @@ const products = [
   },
 ];
 
-const ProductList = ({ navigation }) => {
+export const ProductList = ({ navigation }) => {
   const getStars = (rating) => {
     rating = Math.min(3, Math.max(0, rating));
     const filledStars = Array.from({ length: rating }, (_, i) => "★");
@@ -79,7 +80,7 @@ const ProductList = ({ navigation }) => {
   );
 
   return (
-    <View>
+    <ScrollView>
       <FlatList
         style={styles.contentList}
         columnWrapperStyle={styles.listContainer}
@@ -87,15 +88,15 @@ const ProductList = ({ navigation }) => {
         renderItem={renderProductCard}
         keyExtractor={(item) => item.id}
       />
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  //   backgroundColor: "#fff",
-  // },
+  container: {
+    marginBottom: 5,
+    backgroundColor: "#fff",
+  },
   // navigation: {
   //   backgroundColor: "#0066ff",
   //   padding: 10,
@@ -165,4 +166,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ProductList;
