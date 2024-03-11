@@ -56,7 +56,7 @@ export const Calculatrice = () => {
   };
 
   const { width } = Dimensions.get("window");
-  const buttonWidth = width / 4.5;
+  const buttonSize = width / 5;
 
   return (
     <View style={styles.container}>
@@ -75,7 +75,7 @@ export const Calculatrice = () => {
                 style={[
                   styles.button,
                   getButtonStyle(value),
-                  { width: buttonWidth },
+                  { width: buttonSize, height: buttonSize },
                 ]}
                 onPress={() => {
                   if (value === "AC") {
@@ -140,11 +140,11 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   button: {
-    borderRadius: 95,
+    borderRadius: 100,
     justifyContent: "center",
     alignItems: "center",
-    margin: 1,
-    height: 68,
+    margin: 2,
+    padding: 2,
   },
   buttonText: {
     fontSize: 24,
