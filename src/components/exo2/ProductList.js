@@ -2,7 +2,6 @@ import {
   StyleSheet,
   Text,
   View,
-  ScrollView,
   Image,
   TouchableOpacity,
   FlatList,
@@ -67,7 +66,7 @@ export const ProductList = ({ navigation }) => {
   const renderProductCard = ({ item }) => (
     <TouchableOpacity
       style={styles.card}
-      onPress={() => navigation.navigate("ProductDetails", { product: item })}
+      onPress={() => navigation.navigate("Product details", { product: item })}
     >
       <Image style={styles.image} source={{ uri: item.image }} />
       <View style={styles.cardContent}>
@@ -80,31 +79,16 @@ export const ProductList = ({ navigation }) => {
   );
 
   return (
-    <ScrollView>
-      <FlatList
-        style={styles.contentList}
-        columnWrapperStyle={styles.listContainer}
-        data={products}
-        renderItem={renderProductCard}
-        keyExtractor={(item) => item.id}
-      />
-    </ScrollView>
+    <FlatList
+      style={styles.contentList}
+      data={products}
+      renderItem={renderProductCard}
+      keyExtractor={(item) => item.id}
+    />
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    marginBottom: 5,
-    backgroundColor: "#fff",
-  },
-  // navigation: {
-  //   backgroundColor: "#0066ff",
-  //   padding: 10,
-  // },
-  // navigationTitle: {
-  //   color: "#fff",
-  //   fontWeight: "bold",
-  // },
   contentList: {
     margin: 1,
     flex: 1,

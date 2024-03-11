@@ -60,7 +60,7 @@ export const Calculatrice = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Calculatrice</Text>
+      {/* <Text style={styles.title}>Calculator</Text> */}
       <View style={styles.resultContainer}>
         <Text style={styles.result} numberOfLines={1} adjustsFontSizeToFit>
           {result}

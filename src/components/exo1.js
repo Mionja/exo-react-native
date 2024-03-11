@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
-const Exo1 = () => {
+export const Exo1 = () => {
   const [count, setCount] = useState(0);
   const [clicks, setClicks] = useState(0);
 
@@ -66,5 +66,3 @@ const styles = StyleSheet.create({
     color: "white",
   },
 });
-
-export default Exo1;
