@@ -5,6 +5,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Calculatrice } from "./src/components/calculatrice/Calculatrice";
 import { HomePage } from './src/HomePage';
+import { Card1 } from './src/components/cards/Card1';
+import { Card2 } from './src/components/cards/Card2';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +19,8 @@ export default function App() {
         <Stack.Screen name="Count" component={Exo1} />
         <Stack.Screen name="Products" component={ProductList} />
         <Stack.Screen name="Product details" component={ProductDetails} />
+        <Stack.Screen name="Flip card" component={Card1} />
+        <Stack.Screen name="Card 2" component={Card2} />
       </Stack.Navigator>
     </NavigationContainer>
   );

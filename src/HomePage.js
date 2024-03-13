@@ -25,6 +25,20 @@ export const HomePage = ({ navigation }) => {
         >
           <Text style={styles.buttonText}>Calculator</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("Flip card")}
+        >
+          <Text style={styles.buttonText}>Flip Card</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("Card 2")}
+        >
+          <Text style={styles.buttonText}>Card 2</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
