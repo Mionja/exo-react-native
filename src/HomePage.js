@@ -39,6 +39,12 @@ export const HomePage = ({ navigation }) => {
         >
           <Text style={styles.buttonText}>Card 2</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("User Application")}
+        >
+          <Text style={styles.buttonText}>User Application CRUD</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
